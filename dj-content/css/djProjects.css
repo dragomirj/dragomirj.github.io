@@ -1,0 +1,252 @@
+/* DRAGOMIR JOVANOVIC 232/18 </ 02.12.20 */
+/* MORA SVUDA VW ZBOG CENTRIRANJA! */
+body {
+    margin: 0
+}
+
+a,
+a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    color: #000
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: greenyellow
+}
+
+/* LOGO */
+.title {
+    color: #000;
+    height: 19px;
+    background-color: greenyellow;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 1.1em
+}
+
+/* levi ugao za logo */
+.navLeft {
+    position: absolute;
+    left: 4vw;
+    top: 2vw
+}
+
+.mainNav {
+    top: 0;
+    display: flex;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    box-sizing: content-box;
+    background-color: #fdf9ec !important;
+    font-family: sans-serif;
+    position: sticky;
+    justify-content: center
+}
+
+.mainNav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 4;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important
+}
+
+.mainNav > ul > li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em
+}
+
+.mainNav > ul > li:hover {
+    text-decoration: underline
+}
+
+.menuBox {
+    width: 35px;
+    height: 19px !important;
+    cursor: pointer;
+    background-color: greenyellow
+}
+
+.bar1,
+.bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #000;
+    transition: 0.33s
+}
+
+.bar2 {
+    width: 35px;
+    height: 6px;
+    margin: 3px 0
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6.5px);
+    transform: rotate(-45deg) translate(-5px, 6.5px)
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-3.5px, -5px);
+    transform: rotate(45deg) translate(-3.5px, -5px)
+}
+
+#desktop {
+    display: block
+}
+
+#mobile {
+    display: none
+}
+
+/* meni */
+.headerWrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: beige;
+    overflow: hidden !important;
+    overflow-y: hidden !important
+}
+
+/* text u meniju */
+.headerMenuNav {
+    display: flex;
+    position: absolute;
+    margin-top: 29vw;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: beige
+}
+
+/* linkovi */
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center
+}
+
+/* linkovi da budu full size */
+.button {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    text-transform: uppercase
+}
+
+.button > a,
+.button > a:visited,
+.button > a:active,
+.button > a:link {
+    text-decoration: none;
+    color: #000
+}
+
+.button > a:hover {
+    text-decoration: underline;
+    font-size: 1.3em
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3%
+}
+
+.row .column {
+    padding: 0 1em;
+    background-color: bisque;
+    padding-top: 1em;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    border: 7px solid greenyellow
+}
+
+.column > h2 {
+    text-align: center;
+    background-color: brown;
+    margin-top: 0;
+    width: 100%
+}
+
+.column > img {
+    width: 100%
+}
+
+.column > p {
+    width: 100%;
+    background-color: burlywood;
+    text-align: center
+}
+
+.active {
+    font-style: italic;
+    text-transform: none !important
+}
+
+.hidden {
+    display: none;
+}
+
+.overflow {
+    overflow: hidden !important
+}
+
+@media all and (min-width: 1024px) {
+    .row .column {
+        width: 25%
+    }
+} /* DESKTOP */
+
+@media all and (max-width:1023px) {
+    #desktop {
+        display: none
+    }
+
+    #mobile {
+        display: flex;
+        justify-content: flex-end
+    }
+
+    .mainNav > ul {
+        align-items: flex-end !important;
+        justify-content: flex-end !important
+    }
+
+    .mainNav > ul > li {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 5vw;
+        padding-bottom: 5vw
+    }
+
+    .navLeft {
+        position: absolute;
+        top: 7vw !important;
+    }
+    
+    .row {
+        flex-direction: column;
+        padding-top: 0
+    }
+
+    .row .column {
+        margin-bottom: 3em
+    }
+} /* MOBILE */

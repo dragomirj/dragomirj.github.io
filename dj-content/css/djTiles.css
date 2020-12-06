@@ -1,0 +1,234 @@
+/* DRAGOMIR JOVANOVIC 232/18 </ 28.10.20 */
+body {
+    background-color: #000
+}
+
+html,
+body,
+.gridContainer {
+    height: 100%;
+    margin: 0
+}
+
+.gridContainer {
+    display: grid;
+    gap: 5px 5px;
+    padding: 5px 5px 5px 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "small1 small2 large1 large1 small3 small4 small5 small6"
+        "medium1 small7 large1 large1 small8 small9 small10 small11"
+        "medium1 small12 large1 large1 small13 medium2 small14 small15"
+        "medium1 small16 large1 large1 small17 medium2 large2 large2"
+        "small18 small19 medium3 small20 small21 small22 large2 large2"
+        "small23 small24 medium3 small25 small26 small27 large2 large2"
+}
+
+@media only screen and (max-width:753px) {
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 7px 7px;
+        grid-template-areas:
+            "small1 small2"
+            "small3 small4"
+            "small5 medium1"
+            "small6 medium1"
+            "small7 small8"
+            "large1 large1"
+            "large1 large1"
+            "small9 small10"
+            "small11 large2"
+            "medium2 large2"
+            "medium2 large2"
+            "small12 large2"
+            "small13 large2"
+            "small14 small15"
+            "small16 small17"
+            "medium3 medium3"
+            "small18 small19"
+            "small20 small21"
+            "small22 small23"
+            "small24 small25"
+            "small26 small27"
+    }
+
+    .medium2,
+    .medium3,
+    .large1 {
+        display: none
+    }
+}
+
+.large1 {
+    grid-area: large1
+}
+
+.small1 {
+    grid-area: small1
+}
+
+.small2 {
+    grid-area: small2
+}
+
+.small3 {
+    grid-area: small3
+}
+
+.small4 {
+    grid-area: small4
+}
+
+.small5 {
+    grid-area: small5
+}
+
+.small6 {
+    grid-area: small6
+}
+
+.medium1 {
+    grid-area: medium1
+}
+
+.small7 {
+    grid-area: small7
+}
+
+.small8 {
+    grid-area: small8
+}
+
+.small9 {
+    grid-area: small9
+}
+
+.small10 {
+    grid-area: small10
+}
+
+.small11 {
+    grid-area: small11
+}
+
+.small12 {
+    grid-area: small12
+}
+
+.small13 {
+    grid-area: small13
+}
+
+.medium2 {
+    grid-area: medium2
+}
+
+.small14 {
+    grid-area: small14
+}
+
+.small15 {
+    grid-area: small15
+}
+
+.large2 {
+    grid-area: large2
+}
+
+.small16 {
+    grid-area: small16
+}
+
+.small17 {
+    grid-area: small17
+}
+
+.medium3 {
+    grid-area: medium3
+}
+
+.small18 {
+    grid-area: small18
+}
+
+.small19 {
+    grid-area: small19
+}
+
+.small20 {
+    grid-area: small20
+}
+
+.small21 {
+    grid-area: small21
+}
+
+.small22 {
+    grid-area: small22
+}
+
+.small23 {
+    grid-area: small23
+}
+
+.small24 {
+    grid-area: small24
+}
+
+.small25 {
+    grid-area: small25
+}
+
+.small26 {
+    grid-area: small26
+}
+
+.small27 {
+    grid-area: small27
+}
+
+.m {
+    background-color: #00824d
+}
+
+.s {
+    background-color: purple
+}
+
+.v {
+    background-color: darkgrey
+}
+
+.imgSmall {
+    object-fit: cover;
+    width: 100%
+}
+
+.imgLarge {
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+}
+
+.row {
+    align-content: center;
+    width: 77%;
+    background-color: lemonchiffon;
+    border-radius: 33px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px
+}
+
+.row > p {
+    margin-bottom: 0 !important;
+    text-decoration: none !important;
+    text-align: center !important
+}
+
+.m:hover {
+    background-color: aqua
+}

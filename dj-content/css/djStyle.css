@@ -1,0 +1,195 @@
+/* DRAGOMIR JOVANOVIC 232/18 </ 30.10.20 */
+a,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #000
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+html,
+body,
+.gridContainer {
+    height: 100%;
+    margin: 0;
+    background-color: #ebf5ed /* Smatramo da je dan trenutno */
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". container ."
+}
+
+.container {
+    grid-area: container
+}
+
+/* header */
+.headerRow {
+    /*            margin-top: 5vh;*/
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+    border: 3px solid #a5ff4d
+}
+
+/* leva strana */
+#date {
+    flex: 1;
+    font-weight: bold
+}
+
+/* desna strana */
+#mode {
+    flex: 1;
+    text-align: right !important;
+    margin-right: 7px
+}
+
+.dj {
+    text-align: center;
+    line-height: 21px
+}
+
+/* dj title */
+.titleNeon {
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 0.33vw;
+    margin-top: 0;
+    background-color: chartreuse
+}
+
+/* o meni onaj para */
+.title {
+    font-family: "Times New Roman", Times, serif;
+    border: 5px solid #a5ff4d;
+    background-color: #00CC00;
+    font-style: oblique;
+    font-size: 0.9em;
+    margin-top: 0;
+    color: black
+}
+
+.modeCircle {
+    float: right;
+    border-radius: 50%;
+    background-color: aqua;
+    height: 32px;
+    width: 32px
+}
+
+.modeIcon {
+    float: right !important;
+    display: block; /* NE SME OVDE IMPORTANT ZBOG HIDDEN-A */
+    max-width: 32px;
+    max-height: 32px;
+    text-align: center
+}
+
+.modeMenu {
+    display: flex;
+    padding: 1em 15px 1em 15px;
+    background-color: darkseagreen
+}
+
+.modeMenu > p {
+    margin: 0
+}
+
+.modeMenuLeft {
+    flex: 1
+}
+
+.modeMenuRight {
+    flex: 1;
+    padding-right: 22px;
+    margin: auto
+}
+
+.arrow {
+    padding: 3px;
+    text-align: center;
+    border: solid black;
+    display: inline-block;
+    float: right !important;
+    border-width: 0 5px 5px 0;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg)
+}
+
+/* slika */
+.mainHeaderContainer {
+    height: 33.3333%
+}
+
+.mainHeaderImage {
+    object-fit: contain;
+    height: 100%;
+    width: 100%
+}
+
+.buttonLinks {
+    padding: 15px;
+    text-align: center;
+    border: 9px solid green;
+    background-color: chartreuse;
+}
+
+.buttonLinks > p {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.buttonLinksHover {
+    border: 9px solid chartreuse;
+    background-color: green
+}
+
+#page {}
+#content {}
+#buttons {}
+
+.bold {
+    font-weight: bold !important
+}
+
+.centerText {
+    text-align: center;
+    white-space: pre-wrap
+}
+
+.highlight {
+    background-color: greenyellow !important
+}
+
+#row {
+    display: flex
+}
+
+/* OSTAVI OVO NA KRAJU! */
+.hidden {
+    display: none
+}
+
+@media only screen and (max-width:625px) {
+    .gridContainer {
+        display: grid;
+        grid-template-areas: "container" !important;
+        grid-template-columns: 1fr !important;
+        padding: 0 !important;
+        margin-left: 7vw;
+        margin-right: 7vw
+    }
+
+    .headerRow {
+        margin-top: 0 !important
+    }
+}

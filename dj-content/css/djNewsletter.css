@@ -1,0 +1,187 @@
+/* DRAGOMIR JOVANOVIC 232/18 </ 30.10.20 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200&display=swap');
+/* IMPORTOVANJE IBM PLEX FONTA */
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    top: 0;
+    margin: 0;
+    padding: 0
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #000
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+html,
+body,
+.gridContainer {
+    height: 100%;
+    margin: 0;
+    background-color: #ebf5ed
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". container .";
+    background: url("/dj-content/img/djPattern.jpg") center center repeat;
+}
+
+.container {
+    grid-area: container
+}
+
+/* workaround za svaki slucaj */
+.gridContainer {
+    width: 100%;
+}
+
+/* box gde je forma */
+.containerBox {
+    padding: 3em 3em;
+    background: #f8f4e5;
+    border-top: 10px solid chartreuse
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    font-size: 12pt;
+    line-height: 24pt;
+    font-family: 'IBM Plex Serif', serif;
+    border: 0px solid transparent /* overwrite da bi bilo u full width-u */
+}
+
+input {
+    margin-bottom: 24pt
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 10pt;
+    line-height: 24pt;
+    font-style: italic;
+    margin: 0 0 0.5em 0
+}
+
+/* obavezno (*) */
+em {
+    color: #f45702;
+    font-weight: bold
+}
+
+input,
+textarea {
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: #f8f4e5;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid deepskyblue /* kada se kuca */
+}
+
+textarea {
+    resize: none
+}
+
+button {
+    color: white;
+    float: right;
+    border: none;
+    display: block;
+    line-height: 21pt;
+    padding-left: 19px;
+    padding-right: 19px;
+    letter-spacing: 1.5px;
+    background-color: limegreen;
+    border-bottom: 3px solid transparent
+}
+
+button:hover {
+    color: #000;
+    background: inherit;
+    font-style: oblique;
+    border-bottom: 3px solid chartreuse
+}
+
+/* jedan red */
+.row {
+    display: flex;
+    align-items: center;
+}
+
+/* levi red */
+.row > .lleft {
+    flex: 1;
+}
+
+/* desni red */
+.row > .rright {
+    flex: 1;
+}
+
+/* za label za radio da bude centered */
+.radioLabel {
+    vertical-align: top;
+    display: inline-block
+}
+
+/* za radio da bude inline */
+.radioInput {
+    margin: 0;
+    vertical-align: top;
+    display: inline-block
+}
+
+/* select */
+#drzava {
+    border-radius: 20px;
+    width: 13em;
+    height: 1.5em;
+    background-color: greenyellow
+}
+
+/* submit dugme */
+.submit {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+@media only screen and (max-width:1024px) {
+    .gridContainer {
+        display: grid;
+        grid-template-areas: "container" !important;
+        grid-template-columns: 1fr !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+
+    .containerBox {
+        height: 100%
+    }
+
+}
