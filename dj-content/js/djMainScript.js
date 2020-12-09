@@ -49,6 +49,8 @@ function __checkMode() {
     if (__stop == 1) {
         return
     } //Dodatni stop
+    
+    __createDateTime();
     let __current = __convertToMinutes(__createTime());
 
     if (__debug == 1) {
