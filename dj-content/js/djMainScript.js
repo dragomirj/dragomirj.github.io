@@ -45,7 +45,6 @@ function __openWindow(__url, __self) {
 }
 
 function __checkMode() {
-    __createDateTime();
     if (__stop == 1) {
         return
     } //Dodatni stop
