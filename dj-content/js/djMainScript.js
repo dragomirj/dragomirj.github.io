@@ -97,9 +97,8 @@ $(document).ready(function () {
     });
 });
 
-__createDateTime();
-
 //Izvrsavaj sve dok nije stopirano azuriranje theme!
 if (__stop == 0) {
     setInterval(__checkMode, __timer);
+    setInterval(__createDateTime, 1000);
 }
