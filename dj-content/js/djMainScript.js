@@ -50,6 +50,7 @@ function __checkMode() {
         return
     } //Dodatni stop
     
+    jd = new Date();
     __createDateTime();
     let __current = __convertToMinutes(__createTime());
 
@@ -100,5 +101,4 @@ $(document).ready(function () {
 //Izvrsavaj sve dok nije stopirano azuriranje theme!
 if (__stop == 0) {
     setInterval(__checkMode, __timer);
-    setInterval(__createDateTime, 1000);
 }
